@@ -1,1 +1,7 @@
+com\HAT\model\Product.class
 com\HAT\controller\HomeController.class
+com\HAT\service\ProductService.class
+com\HAT\dao\ProductDao.class
+com\HAT\service\Impl\ProductServiceImpl.class
+com\HAT\dao\Impl\ProductDaoImpl.class
+com\HAT\controller\ProductController.class

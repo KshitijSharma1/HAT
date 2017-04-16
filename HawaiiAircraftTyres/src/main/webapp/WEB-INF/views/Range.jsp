@@ -77,9 +77,7 @@ Hawaii manufactures new bias and new radial aircraft tyres. It retreads all manu
 
 Click the appropriate link below to start searching.</br></br>
 
-<a href="#">Search by Aircraft Manufacturer and Aircraft Type</a></br>
-<a href="#">Search by Desired Tyre Part Number</a></br>
-<a href="#">Search by all or part of Tyre Size</a> (Not all of the tyre size is required)</br></br>
+<a href="addNewProduct">Search different range of tyres</a></br></br>
 </br>
  
    
