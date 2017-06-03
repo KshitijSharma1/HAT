@@ -1,7 +1,7 @@
 <%@include file="./templates/Header.jsp"%>
 
 <div class="container-wrapper"> <div class="container">
-<div  id="login-box">
+<div class="well"><div  id="login-box">
 <h2>Login with Username and Password</h2>
 
 <c:if test="${not empty msg}">
@@ -26,6 +26,7 @@
 		<input type ="hidden"name="${_csrf.parameterName}"
 			value="${_csrf.token}" />
 		</form>
+		</div>
 		</div>
 		</div>
 		</div>

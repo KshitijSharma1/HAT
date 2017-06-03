@@ -63,11 +63,13 @@ ul.unstyled {
                <li class="active"><a href="index"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                 <li><a href="<c:url value="/aboutus"/>"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
                 <li><a href="<c:url value="/contactus"/>"><span class="glyphicon glyphicon-phone"></span> Contact</a></li>
+               	
                	<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
                 <li><a href="<c:url value="/addProduct"/>">Add Product</a></li>
                 </c:if>
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
+			  
 			  <c:if test="${pageContext.request.userPrincipal.name != null}">
 							<li><a>Welcome:
 									${pageContext.request.userPrincipal.name}</a></li>
@@ -78,6 +80,7 @@ ul.unstyled {
 							</c:if>
 
 						</c:if>
+						
 						<c:if test="${pageContext.request.userPrincipal.name == null}">
 				<li><a href="<c:url value="/login"/>"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
 				<li><a href="<c:url value="/SignUpmodal"/>"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
