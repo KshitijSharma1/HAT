@@ -1,7 +1,12 @@
-C:\Users\Owner's Lair\git\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\dao\Impl\ProductDaoImpl.java
-C:\Users\Owner's Lair\git\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\dao\ProductDao.java
-C:\Users\Owner's Lair\git\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\controller\ProductController.java
-C:\Users\Owner's Lair\git\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\service\Impl\ProductServiceImpl.java
-C:\Users\Owner's Lair\git\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\controller\HomeController.java
-C:\Users\Owner's Lair\git\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\model\Product.java
-C:\Users\Owner's Lair\git\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\service\ProductService.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\controller\ProductController.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\controller\HomeController.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\service\Impl\ProductServiceImpl.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\model\Users.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\model\Authorities.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\model\BillingAddress.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\model\Customer.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\dao\ProductDao.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\service\ProductService.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\dao\Impl\ProductDaoImpl.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\model\ShippingAddress.java
+H:\My Project\my pro\HAT\HawaiiAircraftTyres\src\main\java\com\HAT\model\Product.java

@@ -1,7 +1,12 @@
 com\HAT\model\Product.class
 com\HAT\controller\HomeController.class
+com\HAT\model\BillingAddress.class
 com\HAT\service\ProductService.class
 com\HAT\dao\ProductDao.class
 com\HAT\service\Impl\ProductServiceImpl.class
+com\HAT\model\Customer.class
 com\HAT\dao\Impl\ProductDaoImpl.class
+com\HAT\model\ShippingAddress.class
+com\HAT\model\Users.class
+com\HAT\model\Authorities.class
 com\HAT\controller\ProductController.class

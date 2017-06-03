@@ -19,7 +19,6 @@
 body { 
 	background-color:grey ;
 	padding-top:80px;
-	
 	};
 
 </style>
@@ -46,7 +45,7 @@ $('input[name=mfg]').datepicker({
 
 
 <div class="form-group" >
-<label class="col-md-4 control-label"for="name">Product Name</label>
+<label class="col-md-4 control-label"for="name">Aircraft Tyre Name</label>
 <div class="col-md-6">
 <form:input path="name" class="form-control"/>
 <form:errors path="name" cssStyle="color:#ff0000"></form:errors>

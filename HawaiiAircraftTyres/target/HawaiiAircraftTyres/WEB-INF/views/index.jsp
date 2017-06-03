@@ -1,51 +1,6 @@
-<html>
-<head>
+<%@include file="./templates/Header.jsp"%>
 
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Hawaii Airplane Tyres</title>
-
-<link rel="stylesheet" type="text/css" href="resources/css/Style.css">
-<link rel="icon" href="G:\project\bootstrap\images\icon.ico">
-<link href="carousel.css" rel="stylesheet">
-
-<!--<link rel="stylesheet" href="C:\Users\kcom\Desktop\Project\Bootstrap\css\bootstrap.min.css" >
-    <script src="C:\Users\kcom\Desktop\Project\Bootstrap\js\bootstrap.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">-->
-
-
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-<style>
-footer {
-	background: #333;
-	color: #eee;
-	font-size: 11px;
-	padding: 20px;
-	width: device-width;
-}
-
-ul.unstyled {
-	list-style: none;
-	padding: 0;
-}
-</style>
-</head>
-
-<body>
-
-	<%@include file="Login.jsp"%>
-	<%@include file="SignUp.jsp"%>
-	<%@include file="./templates/Header.jsp"%>
-
-
-
-	<!-- Carousel
+<!-- Carousel
     ================================================== -->
 	<div class="hero-slide">
 		<div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -114,7 +69,7 @@ ul.unstyled {
 		<div class="row">
 			<div class="span12" style="padding-top: 5px;">
 				<center>
-					<img src="resources/images/logo3.JPG">
+					<img src="<c:url value="/resources/images/logo3.JPG"/>">
 				</center>
 				<center>
 					<h2 style="font-weight: 200 !important;">Welcome to Hawaii
@@ -154,13 +109,13 @@ ul.unstyled {
 				<div class="col-md-4" class="col-sm-4" class="col-lg-4"
 					class="col-xs-4">
 					<center>
-						<a href="range"> <img class="img-circle"
-							src="resources/images/tyre7.jpg"
+						<a href="<c:url value="/range"/>"> <img class="img-circle"
+							src="<c:url value="/resources/images/tyre7.jpg"/>"
 							alt="Generic placeholder thumbnail" width="200" height="200"></a>
 					</center>
 					<h2>
 						<center>
-							<a href="range">Our Range</a>
+							<a href="<c:url value="/range"/>">Our Range</a>
 						</center>
 					</h2>
 					<center>
@@ -173,12 +128,12 @@ ul.unstyled {
 				<div class="col-md-4" class="col-sm-4" class="col-lg-4"
 					class="col-xs-4">
 					<center>
-						<a href="technical"> <img class="img-circle"
-							src="resources/images/tyre6.jpg"
+						<a href="<c:url value="/technical"/>"> <img class="img-circle"
+							src="<c:url value="/resources/images/tyre6.jpg"/>"
 							alt="Generic placeholder thumbnail" width="200" height="200"></a>
 					</center>
 					<h2>
-						<a href="technical"><center>Training and Technical
+						<a href="<c:url value="/technical"/>"><center>Training and Technical
 								Support</center></a>
 					</h2>
 					<center>
@@ -191,12 +146,12 @@ ul.unstyled {
 				<div class="col-md-4" class="col-sm-4" class="col-lg-4"
 					class="col-xs-4">
 					<center>
-						<a href="machinery"> <img class="img-circle"
-							src="resources/images/tyre5.jpg" alt="Generic placeholder image"
+						<a href="<c:url value="/machinery"/>"> <img class="img-circle"
+							src="<c:url value="/resources/images/tyre5.jpg"/>" alt="Generic placeholder image"
 							width="200" height="200"></a>
 					</center>
 					<h2>
-						<a href="machinery"><center>Machinery and Working</center></a>
+						<a href="<c:url value="/machinery"/>"><center>Machinery and Working</center></a>
 					</h2>
 					<center>
 						<p>We let you know how we make it,along with detailed
@@ -216,5 +171,5 @@ ul.unstyled {
 	<!-- /.container -->
 
 	<%@include file="./templates/Footer.jsp"%>
-</body>
-</html>
+
+

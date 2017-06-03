@@ -19,7 +19,7 @@ public class Product implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-
+	
 	@NotEmpty(message = "Product Name is mandatory")
 	private String name;
 

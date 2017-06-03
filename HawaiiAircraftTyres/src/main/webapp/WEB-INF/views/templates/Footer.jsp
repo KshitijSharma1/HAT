@@ -14,7 +14,7 @@
 <div class="col-sm-2">
 <h6>Navigation</h6>
 <ul class="unstyled">
-<li><a href="index">Home</a></li>
+<li><a href="<c:url value="/index"/>">Home</a></li>
 <li><a href="">Services</a></li>
 <li><a href="">Terms</a></li>
 <li><a href="">Privacy</a></li>

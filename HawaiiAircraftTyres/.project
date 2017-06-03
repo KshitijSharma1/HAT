@@ -3,6 +3,8 @@
 	<name>HawaiiAircraftTyres</name>
 	<comment></comment>
 	<projects>
+		<project>RemoteSystemsTempFiles</project>
+		<project>Servers</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

@@ -27,25 +27,25 @@ public class ProductController {
 	@RequestMapping("/addProduct")
 	public String getProductForm(Model model) {
 		// Product product = new Product();
-		model.addAttribute("product", new Product());
+		model.addAttribute("productcommand", new Product());
 		return "NewRange";
 	}
 
-	@ModelAttribute("productcommand")
+	/*@ModelAttribute("productcommand")
 	public Product newProduct() {
-		/*
+		
 		 * Product newProduct=productService.saveProduct(); /NOT A FINAL
 		 * VERSION..
-		 */
+		 
 		return new Product();
 
-	}
+	}*/
 
 	@RequestMapping("/addNewProduct")
 	public String addProduct(@Valid @ModelAttribute("productcommand") Product product, BindingResult result,
 			HttpServletRequest request) {
 		if (result.hasErrors())
-			return "productform";
+			return "NewRange";
 		productService.saveOrUpdateProduct(product);
 		
 		return "redirect:/addProduct";
