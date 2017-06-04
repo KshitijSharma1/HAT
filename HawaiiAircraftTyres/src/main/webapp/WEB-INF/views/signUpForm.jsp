@@ -10,6 +10,20 @@
 </head>
 <body>
 
+<div class="hero-slide">
+<div class="jumbotron jumbotron-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12 col-lg-12">
+                <h1>
+                    <b>Sign Up</b> </h1>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+
+<div class="well">
 <div class="container">
 <div class="row">
 <div class="form-horizontal">
@@ -170,6 +184,8 @@
 </div>
 </div>
 </div>
+</div>
 </body>
 </html>
+
 <%@include file="./templates/Footer.jsp"%>
