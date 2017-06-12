@@ -8,10 +8,12 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Transient;
 import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
+import org.springframework.web.multipart.MultipartFile;
 
 @Entity
 @Table(name = "product")
@@ -34,8 +36,20 @@ public class Product implements Serializable {
 
 	@NotNull(message = "Manufacturing date is mandatory")
 	private Date mfg;
+	
+	//----------------------------------------------
+	@Transient
+	private MultipartFile image;
+	
 
+	public MultipartFile getImage() {
+		return image;
+	}
 
+	public void setImage(MultipartFile image) {
+		this.image = image;
+	}
+	//----------------------------------------------
 	public int getId() {
 		return id;
 	}

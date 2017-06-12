@@ -16,6 +16,16 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">-->
 
 
+
+<!-- JQuery -->
+<link
+	href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
+
+
 <link rel="stylesheet"
 	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <script
@@ -60,13 +70,14 @@ ul.unstyled {
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-               <li class="active"><a href="index"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+               <li class="active"><a href="<c:url value="/index"/>"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                 <li><a href="<c:url value="/aboutus"/>"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
                 <li><a href="<c:url value="/contactus"/>"><span class="glyphicon glyphicon-phone"></span> Contact</a></li>
                	
                	<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
                 <li><a href="<c:url value="/addProduct"/>">Add Product</a></li>
                 </c:if>
+                
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
 			  

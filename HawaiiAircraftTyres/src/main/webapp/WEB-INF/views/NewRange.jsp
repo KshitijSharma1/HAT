@@ -1,4 +1,5 @@
 <%@ include file="templates/Header.jsp" %>
+
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -36,7 +37,7 @@ $('input[name=mfg]').datepicker({
 <div class="container">
 <div class="row">
 <div class="form-horizontal">
-<form:form action="addNewProduct"  commandName="productcommand" >
+<form:form action="addNewProduct"  commandName="productcommand" enctype="multipart/form-data">
 
 <div class="form-group">
 <label for="id"></label>
@@ -59,6 +60,7 @@ $('input[name=mfg]').datepicker({
 <form:errors path="description" cssStyle="color:#ff0000"></form:errors>
 </div>
 </div>
+
 
 <div class="form-group">
 <label class="col-md-4 control-label" for="price">Price</label>
@@ -85,7 +87,17 @@ $('input[name=mfg]').datepicker({
 </div>
 
 
-<!--  <input type="submit" value="Add Product" class="btn btn-default">-->
+<div class="form-group">
+<label class="col-md-4 control-label" for="image">Image</label>
+<div class="col-md-6"></div>
+<form:input path="image" type="file"/>
+
+</div>
+
+
+
+
+ <!-- <input type="submit" value="Add Product" class="btn btn-default"> -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="singlebutton"></label>
   <div class="col-md-4">

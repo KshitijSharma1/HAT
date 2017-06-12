@@ -19,8 +19,7 @@
 						<div class="carousel-caption">
 							<h1>All Airplane Tyres Available at One Place</h1>
 							<p>
-								<a class="btn btn-lg btn-primary" href="#" data-toggle="modal"
-									data-target="#SignUpmodal" role="button">Sign up today</a>
+								<a class="btn btn-lg btn-primary" role="button" href="<c:url value="/SignUpmodal"/>">Sign up today</a>
 							</p>
 						</div>
 					</div>

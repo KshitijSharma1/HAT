@@ -1,5 +1,8 @@
 package com.HAT.dao.Impl;
 
+import java.util.List;
+
+import org.hibernate.Query;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,8 +29,40 @@ private SessionFactory sessionFactory;
 		System.out.println(product.getId());
 		return product;	
 	}
+	
+	public List<Product> getAllProducts() {
+		Session session=sessionFactory.openSession();
+		Query query=session.createQuery("from Product");
+		List<Product> products=query.list();
+		session.close();
+		return products;
+	}
+
+	public Product getProductById(int id) {
+		Session session=sessionFactory.openSession();
+		//select * from product where id=34
+		Product product=(Product)session.get(Product.class,id);
+		session.close();
+		return product;
+	}
+	
+	public void deleteProduct(int id) {
+		Session session=sessionFactory.openSession();
+		//Make the object persistent[read the data from the table and add it to session]
+		Product product=(Product)session.get(Product.class, id);
+		session.delete(product);
+		session.flush();
+		session.close();
+		
+	}
+	
+	 public void editProduct (Product product){
+	        Session session = sessionFactory.openSession();
+	        System.out.println("Id of the product in dao is " + product.getId());
+	        session.update(product);
+	        session.flush();
+	        session.close();
+	    }
 
 
-	
-	
 }

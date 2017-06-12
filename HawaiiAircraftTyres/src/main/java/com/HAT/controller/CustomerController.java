@@ -11,11 +11,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.HAT.model.Authorities;
-import com.HAT.model.BillingAddress;
 import com.HAT.model.Customer;
-import com.HAT.model.ShippingAddress;
-import com.HAT.model.Users;
 import com.HAT.service.CustomerService;
 
 @Controller
@@ -36,7 +32,7 @@ public class CustomerController {
 		return new Customer();
 
 	}
-	//we use  @modelattribute(command name) to read the values that user has entered in the jsp page.
+	//we use  @model attribute(command name) to read the values that user has entered in the jsp page.
 	@RequestMapping("/registerCustomer")
 	public String addCustomer(@Valid @ModelAttribute("customer") Customer customer, BindingResult result, Model model) {
 		List<Customer> customerList = customerService.getAllCustomers();
