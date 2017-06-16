@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hawaii Airplane Tyres</title>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --%>
 <link rel="stylesheet" type="text/css" href="resources/css/Style.css">
 <link rel="icon" href="<c:url value="/resources/images/icon.ico"/>">
 
@@ -74,9 +74,32 @@ ul.unstyled {
                 <li><a href="<c:url value="/aboutus"/>"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
                 <li><a href="<c:url value="/contactus"/>"><span class="glyphicon glyphicon-phone"></span> Contact</a></li>
                	
-               	<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
-                <li><a href="<c:url value="/addProduct"/>">Add Product</a></li>
-                </c:if>
+               	
+               	 <c:if test="${pageContext.request.userPrincipal.name == 'admin'}"> 
+							<li class="dropdown"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#">ADD <span class="caret"></span></a>  
+								<ul class="dropdown-menu">
+									
+									<li><a href="<c:url value="/addProduct" />">Add
+											Product</a></li>
+									<li><a href="<c:url value="/addCategory" />">Add
+											Category</a></li>
+									<li><a href="<c:url value="/addSupplier" />">Add
+											Supplier</a></li>
+								</ul></li>
+					
+
+						
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">VIEW <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+							
+								<li><a href="<c:url value="/suplist" />">View all
+										Suppliers</a></li>
+								<li><a href="<c:url value="/catlist" />">View all
+										Categories</a></li>
+							</ul></li>
+								</c:if>
                 
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
@@ -89,7 +112,6 @@ ul.unstyled {
 							<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
 								<li><a href="<c:url value="/admin"/>">Admin</a></li>
 							</c:if>
-
 						</c:if>
 						
 						<c:if test="${pageContext.request.userPrincipal.name == null}">

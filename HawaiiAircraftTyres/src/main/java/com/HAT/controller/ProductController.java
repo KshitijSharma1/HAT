@@ -19,12 +19,18 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.HAT.model.Product;
 import com.HAT.service.ProductService;
+import com.HAT.service.CategoryService;
+import com.HAT.service.SupplierService;
 
 @Controller
 public class ProductController {
 
 	@Autowired
 	private ProductService productService;
+		@Autowired
+		private CategoryService categoryService;
+		@Autowired
+		private SupplierService supplierService;
 
 	private Path path;
 
@@ -33,6 +39,8 @@ public class ProductController {
 	public String getProductForm(Model model) {
 		// Product product = new Product();
 		model.addAttribute("productcommand", new Product());
+		model.addAttribute("categories", categoryService.getCategories());
+		model.addAttribute("suppliers", supplierService.getAllSuppliers());
 		return "NewRange";
 	}
 
@@ -66,7 +74,7 @@ public class ProductController {
 			}
 		}
 
-		return "productlist";
+		return "redirect:/prodlist";
 
 	}
 
@@ -95,10 +103,10 @@ public class ProductController {
 	public String editProductForm(@PathVariable int id, Model model) {
 		model.addAttribute("product1", productService.getProductById(id));
 		System.out.println("Product id:" + id);
-		/*
-		 * model.addAttribute("categories", categoryService.getCategories());
-		 * model.addAttribute("suppliers", supplierService.getAllSuppliers());
-		 */
+		
+		  model.addAttribute("categories", categoryService.getCategories());
+		  model.addAttribute("suppliers", supplierService.getAllSuppliers());
+		 
 		return "editproductform";
 	}
 

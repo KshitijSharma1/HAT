@@ -42,8 +42,8 @@
 					<th>Description</th>
 					<th>Price</th>
 					<th>Quantity</th>
-					<!-- <th>Category</th>
-					<th>Supplier</th> -->
+					<th>Category</th>
+					<th>Supplier</th>
 				</tr>
 			</thead>
 			<c:forEach var="pd" items="${productList}">
@@ -58,8 +58,8 @@
 					<td>${pd.description}</td>
 					<td>${pd.price}</td>
 					<td>${pd.quantity}</td>
-					<%-- <td>${pd.category.categoryDetails}</td>
-					<td>${pd.supplier.supname}</td> --%>
+					<td>${pd.category.categoryDetails}</td>
+					<td>${pd.supplier.supname}</td>
 					
 					<td>
 					

@@ -7,6 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Transient;
 import javax.validation.constraints.Min;
@@ -14,6 +17,8 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotEmpty;
 import org.springframework.web.multipart.MultipartFile;
+
+import com.HAT.model.Supplier;
 
 @Entity
 @Table(name = "product")
@@ -36,6 +41,32 @@ public class Product implements Serializable {
 
 	@NotNull(message = "Manufacturing date is mandatory")
 	private Date mfg;
+	
+	//----------------------------------------------
+	
+	@ManyToOne
+	@JoinColumn(name="cid")
+	private Category category;
+	
+	public Category getCategory() {
+		return category;
+	}
+
+	public void setCategory(Category category) {
+		this.category = category;
+	}
+
+	public Supplier getSupplier() {
+		return supplier;
+	}
+
+	public void setSupplier(Supplier supplier) {
+		this.supplier = supplier;
+	}
+
+	@ManyToOne
+	@JoinColumn(name = "sid")
+	private Supplier supplier;
 	
 	//----------------------------------------------
 	@Transient

@@ -93,9 +93,26 @@ $('input[name=mfg]').datepicker({
 <form:input path="image" type="file"/>
 
 </div>
+<!-- ---------------------------- -->
+<div class="form-group">
+<label class="col-md-4 control-label" for="category">Category</label>
+<div class="col-md-6">
+<c:forEach var="c" items="${categories}">
+<form:radiobutton path="category.id" value="${c.id}"/>${c.categoryDetails }
+</c:forEach>
+</div>
+</div>
 
+<div class="form-group">
+<label class="col-md-4 control-label" for="supplier">Supplier</label>
+<div class="col-md-6">
+<c:forEach var="s" items="${suppliers}">
+<form:radiobutton path="supplier.sid" value="${s.sid}"/>${s.supname }
+</c:forEach>
+</div>
+</div> 
 
-
+<!-- ------------------------------ -->
 
  <!-- <input type="submit" value="Add Product" class="btn btn-default"> -->
 <div class="form-group">
