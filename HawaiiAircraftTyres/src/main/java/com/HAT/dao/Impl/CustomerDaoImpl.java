@@ -13,9 +13,11 @@ import org.springframework.transaction.annotation.Transactional;
 import com.HAT.dao.CustomerDao;
 import com.HAT.model.Authorities;
 import com.HAT.model.BillingAddress;
+import com.HAT.model.Cart;
 import com.HAT.model.Customer;
 import com.HAT.model.ShippingAddress;
 import com.HAT.model.Users;
+
 
 @Repository
 @Transactional
@@ -50,14 +52,18 @@ public class CustomerDaoImpl implements CustomerDao{
 		authority.setRole("ROLE_USER");
 		authority.setUsername(customer.getUsername());
 
-	
+		Cart cart = new Cart();
+		customer.setCart(cart);
+
+		cart.setCustomer(customer);
 		
 		session.saveOrUpdate(billingAddress);
 		session.saveOrUpdate(shippingAddress);
 		session.saveOrUpdate(users);
 		session.saveOrUpdate(authority);
 		session.saveOrUpdate(customer);// insert into customer values (.....)
-
+		session.saveOrUpdate(cart);
+		
 		session.flush();
 		session.close();
 		System.out.println(customer.getId());
@@ -69,6 +75,17 @@ public class CustomerDaoImpl implements CustomerDao{
 		Query query = session.createQuery("from Customer");
 		List<Customer> customerList = query.list();
 		return customerList;
+
+	}
+
+	public Customer getCustomerByUsername(String username) {
+		Session session = sessionFactory.openSession();
+		Query query = session.createQuery("from Users where username=?");
+		query.setString(0, username);
+		Users users = (Users) query.uniqueResult();
+		Customer customer = users.getCustomer();
+		session.close();
+		return customer;
 
 	}
 }

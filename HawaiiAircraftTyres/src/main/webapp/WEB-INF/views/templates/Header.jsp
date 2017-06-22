@@ -17,6 +17,11 @@
 
 
 
+<!-- Angular Js -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+
 <!-- JQuery -->
 <link
 	href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
@@ -33,9 +38,6 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-	<%@include file="/WEB-INF/views/Login.jsp"%>
-	<%@include file="/WEB-INF/views/SignUp.jsp"%>
 
 <style>
 footer {
@@ -80,7 +82,7 @@ ul.unstyled {
 								data-toggle="dropdown" href="#">ADD <span class="caret"></span></a>  
 								<ul class="dropdown-menu">
 									
-									<li><a href="<c:url value="/addProduct" />">Add
+									<li><a href="<c:url value="/admin/addProduct" />">Add
 											Product</a></li>
 									<li><a href="<c:url value="/addCategory" />">Add
 											Category</a></li>
@@ -103,7 +105,9 @@ ul.unstyled {
                 
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
-			  
+			  <c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+						<li><a href="<c:url value="/cart/getCartId"/>" class="glyphicon glyphicon-shopping-cart"></a></li>
+						</c:if>
 			  <c:if test="${pageContext.request.userPrincipal.name != null}">
 							<li><a>Welcome:
 									${pageContext.request.userPrincipal.name}</a></li>

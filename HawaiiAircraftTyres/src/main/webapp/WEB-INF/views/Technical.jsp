@@ -46,10 +46,8 @@ border-shadow:0px 6px 10px rgba(50, 50, 50, 0.52);
 </style>
 </head>
 <body>
-<%@include file="Login.jsp" %>
-<%@include file="SignUp.jsp" %>
-<%@include file="./templates/Header.jsp" %>
 
+<%@include file="./templates/Header.jsp" %>
 
 
 <div class="hero-slide">

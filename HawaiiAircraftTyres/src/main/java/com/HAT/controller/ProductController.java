@@ -19,22 +19,21 @@ import org.springframework.web.multipart.MultipartFile;
 
 import com.HAT.model.Product;
 import com.HAT.service.ProductService;
-import com.HAT.service.CategoryService;
-import com.HAT.service.SupplierService;
+
 
 @Controller
 public class ProductController {
 
 	@Autowired
 	private ProductService productService;
-		@Autowired
+		/*@Autowired
 		private CategoryService categoryService;
 		@Autowired
-		private SupplierService supplierService;
+		private SupplierService supplierService;*/
 
-	private Path path;
+	/*private Path path;*/
 
-	// display form
+	/*// display form
 	@RequestMapping("/addProduct")
 	public String getProductForm(Model model) {
 		// Product product = new Product();
@@ -42,7 +41,7 @@ public class ProductController {
 		model.addAttribute("categories", categoryService.getCategories());
 		model.addAttribute("suppliers", supplierService.getAllSuppliers());
 		return "NewRange";
-	}
+	}*/
 
 	/*
 	 * @ModelAttribute("productcommand") public Product newProduct() {
@@ -54,7 +53,7 @@ public class ProductController {
 	 * }
 	 */
 
-	@RequestMapping("/addNewProduct")
+	/*@RequestMapping("/addNewProduct")
 	public String addProduct(@Valid @ModelAttribute("productcommand") Product product, BindingResult result,
 			HttpServletRequest request) {
 		if (result.hasErrors())
@@ -76,7 +75,7 @@ public class ProductController {
 
 		return "redirect:/prodlist";
 
-	}
+	}*/
 
 	@RequestMapping("/prodlist")
 	public String getAllProducts(Model model) {
@@ -93,7 +92,7 @@ public class ProductController {
 		return "viewproduct";
 	}
 
-	@RequestMapping("/deleteproduct/{id}")
+	/*@RequestMapping("/deleteproduct/{id}")
 	public String deleteProduct(@PathVariable int id) {
 		productService.deleteProduct(id);
 		return "redirect:/prodlist";
@@ -133,5 +132,5 @@ public class ProductController {
 		productService.editProduct(product);
 		return "redirect:/prodlist";
 	}
-
+*/
 } // The End of Class;

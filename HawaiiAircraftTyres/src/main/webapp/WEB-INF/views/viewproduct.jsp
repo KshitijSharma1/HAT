@@ -13,7 +13,7 @@ ul.unstyled {
 	padding: 0;
 }
 </style>
-<body data-ng-app="app" ng-controller="ProductController">
+<body ng-app="app" ng-controller="ProductController">
     <div class="well">
 	<div class="container-wrapper">
 		<div class="container">
@@ -36,8 +36,18 @@ ul.unstyled {
 					<div class="col-md-5">
 						<h1>${product.name}</h1>
 						<h2>${product.description}</h2>
+						
 					</br>
 						<p>Rs ${product.price}</p>
+						
+						<c:if test="${pageContext.request.userPrincipal.name != 'admin'}">
+							<a href="#" class="btn btn-warning btn-lg"
+								ng-click="addToCart(${product.id })"> <span
+								class="glyphicon glyphicon-shopping-cart"></span>Add to Cart
+
+							</a>
+						</c:if>
+						
 						
 						<a href="<c:url value="/prodlist" />" class="btn btn-danger btn-lg" >View Another Tyre</a> <br />
 					</div>

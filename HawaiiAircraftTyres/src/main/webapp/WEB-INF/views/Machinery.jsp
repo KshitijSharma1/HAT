@@ -62,8 +62,7 @@ font-size: 24px;
 </style>
 </head>
 <body>
-<%@include file="Login.jsp" %>
-<%@include file="SignUp.jsp" %>
+
 <%@include file="./templates/Header.jsp" %>
 
 <div class="jumbotron jumbotron-sm">

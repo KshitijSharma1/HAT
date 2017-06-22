@@ -49,8 +49,7 @@ ul.unstyled {
 </style>
 </head>
 <body>
-	<%@include file="Login.jsp"%>
-	<%@include file="SignUp.jsp"%>
+	
 	<%@include file="./templates/Header.jsp"%>
 
 

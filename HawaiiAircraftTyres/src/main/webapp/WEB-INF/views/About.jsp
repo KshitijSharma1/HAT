@@ -56,8 +56,6 @@ ul.unstyled{
 
 </head>
 <body>
-<%@include file="Login.jsp" %>
-<%@include file="SignUp.jsp" %>
 <%@include file="./templates/Header.jsp" %>
 
 	<div class="hero-slide">

@@ -17,7 +17,6 @@ public class SupplierController {
 	@Autowired
 	private SupplierService supplierService;
 	// display form
-	// http://localhost:9002/HomeDecor/admin/supplierform
 
 	@RequestMapping("/addSupplier")
 	public String getSupplierForm(Model model) {

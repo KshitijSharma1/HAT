@@ -14,6 +14,7 @@ import org.hibernate.validator.constraints.NotEmpty;
 
 import com.HAT.model.BillingAddress;
 import com.HAT.model.ShippingAddress;
+import com.HAT.model.Cart;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
 @Entity
@@ -51,6 +52,20 @@ private ShippingAddress shippingAddress;
 @JoinColumn(name="usersId")
 private Users users;
 
+
+@OneToOne()
+@JoinColumn(name="cartId")
+@JsonIgnore
+private Cart cart;
+
+
+public Cart getCart() {
+	return cart;
+}
+
+public void setCart(Cart cart) {
+	this.cart = cart;
+}
 
 public String getUsername() {
 	return username;

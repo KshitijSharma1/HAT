@@ -7,13 +7,28 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Hawaii Airplane Tyres</title>
 
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%-- <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%> --%>
 <link rel="stylesheet" type="text/css" href="resources/css/Style.css">
 <link rel="icon" href="<c:url value="/resources/images/icon.ico"/>">
 
 <!--<link rel="stylesheet" href="C:\Users\kcom\Desktop\Project\Bootstrap\css\bootstrap.min.css" >
     <script src="C:\Users\kcom\Desktop\Project\Bootstrap\js\bootstrap.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">-->
+
+
+
+<!-- Angular Js -->
+<script
+	src="https://ajax.googleapis.com/ajax/libs/angularjs/1.0.1/angular.min.js"></script>
+
+
+<!-- JQuery -->
+<link
+	href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css"
+	rel="stylesheet">
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+
 
 
 <link rel="stylesheet"
@@ -23,9 +38,6 @@
 <script
 	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-
-	<%@include file="/WEB-INF/views/Login.jsp"%>
-	<%@include file="/WEB-INF/views/SignUp.jsp"%>
 
 <style>
 footer {
@@ -60,13 +72,36 @@ ul.unstyled {
             </div>
             <div id="navbar" class="navbar-collapse collapse">
               <ul class="nav navbar-nav">
-               <li class="active"><a href="index"><span class="glyphicon glyphicon-home"></span> Home</a></li>
+               <li class="active"><a href="<c:url value="/index"/>"><span class="glyphicon glyphicon-home"></span> Home</a></li>
                 <li><a href="<c:url value="/aboutus"/>"><span class="glyphicon glyphicon-info-sign"></span> About</a></li>
                 <li><a href="<c:url value="/contactus"/>"><span class="glyphicon glyphicon-phone"></span> Contact</a></li>
                	
-               	<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
-                <li><a href="<c:url value="/addProduct"/>">Add Product</a></li>
-                </c:if>
+               	
+               	 <c:if test="${pageContext.request.userPrincipal.name == 'admin'}"> 
+							<li class="dropdown"><a class="dropdown-toggle"
+								data-toggle="dropdown" href="#">ADD <span class="caret"></span></a>  
+								<ul class="dropdown-menu">
+									
+									<li><a href="<c:url value="/admin/addProduct" />">Add
+											Product</a></li>
+									<li><a href="<c:url value="/addCategory" />">Add
+											Category</a></li>
+									<li><a href="<c:url value="/addSupplier" />">Add
+											Supplier</a></li>
+								</ul></li>
+					
+
+						
+						<li class="dropdown"><a class="dropdown-toggle"
+							data-toggle="dropdown" href="#">VIEW <span class="caret"></span></a>
+							<ul class="dropdown-menu">
+							
+								<li><a href="<c:url value="/suplist" />">View all
+										Suppliers</a></li>
+								<li><a href="<c:url value="/catlist" />">View all
+										Categories</a></li>
+							</ul></li>
+								</c:if>
                 
               </ul>
 			  <ul class="nav navbar-nav navbar-right">
@@ -79,7 +114,6 @@ ul.unstyled {
 							<c:if test="${pageContext.request.userPrincipal.name == 'admin'}">
 								<li><a href="<c:url value="/admin"/>">Admin</a></li>
 							</c:if>
-
 						</c:if>
 						
 						<c:if test="${pageContext.request.userPrincipal.name == null}">

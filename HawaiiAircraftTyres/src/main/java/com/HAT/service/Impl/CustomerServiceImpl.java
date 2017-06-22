@@ -23,4 +23,8 @@ private CustomerDao customerDao;
 		return customerDao.getAllCustomers();
 	}
 
+	public Customer getCustomerByUsername(String username) {
+		return customerDao.getCustomerByUsername(username);
+	}
+
 }

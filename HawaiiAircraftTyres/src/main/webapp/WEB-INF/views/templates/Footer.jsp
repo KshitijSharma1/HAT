@@ -23,9 +23,9 @@
 <div class="col-sm-2">
 <h6>Follow Us</h6>
 <ul class="unstyled">
-<li><a href="https://www.twitter.com">Twitter</a></li>
-<li><a href="https://www.facebook.com">Facebook</a></li>
-<li><a href="https://www.google.com">Google Plus</a></li>
+<li><a href="<c:url value="https://www.twitter.com"/>">Twitter</a></li>
+<li><a href="<c:url value="https://www.facebook.com"/>">Facebook</a></li>
+<li><a href="<c:url value="https://www.google.com"/>">Google Plus</a></li>
 </ul>
 </div>
 </div>

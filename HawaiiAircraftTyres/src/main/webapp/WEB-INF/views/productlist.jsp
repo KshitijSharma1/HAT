@@ -68,12 +68,12 @@
 					
 					 <c:if test="${pageContext.request.userPrincipal.name == 'admin'}"> 
 					<td>
-					<c:url var="delete" value="/deleteproduct/${pd.id }"></c:url>
+					<c:url var="delete" value="/admin/deleteproduct/${pd.id }"></c:url>
 					<a href="${delete }"><span class="glyphicon glyphicon-remove"></span></a>
 					</td>
 					
 					<td>
-					<c:url var="edit" value="/editform/${pd.id }"></c:url>
+					<c:url var="edit" value="/admin/editform/${pd.id }"></c:url>
 					<a href="${edit }"><span class="glyphicon glyphicon-pencil"></span></a>
 				    </td>
 				   

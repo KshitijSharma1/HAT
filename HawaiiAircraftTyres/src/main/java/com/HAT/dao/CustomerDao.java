@@ -7,4 +7,5 @@ import com.HAT.model.Customer;
 public interface CustomerDao {
 	Customer saveOrUpdateCustomer(Customer customer);
 	List<Customer> getAllCustomers();
+	public Customer getCustomerByUsername(String username);
 }
